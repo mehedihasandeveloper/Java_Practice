@@ -4,7 +4,6 @@
  */
 package forgithub;
 
-
 import java.util.Scanner;
 
 public class ForGitHub {
@@ -13,7 +12,7 @@ public class ForGitHub {
 
     public static void main(String[] args) {
         ForGitHub obj = new ForGitHub();
-        obj.invertedHalfPyramidRotatedBy180Deg();
+        obj.ZeroOneTriangle();
     }
 
     private void calculator() {
@@ -125,9 +124,9 @@ public class ForGitHub {
             System.out.println("");
         }
     }
-    
-    private void halfPyramid(){
-     int n = 4;
+
+    private void halfPyramid() {
+        int n = 4;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -135,8 +134,8 @@ public class ForGitHub {
             System.out.println("");
         }
     }
-    
-    private void invertedHalfPyramid(){
+
+    private void invertedHalfPyramid() {
         int n = 4;
         for (int i = 4; i > n - 4; i--) {
             for (int j = 0; j < i; j++) {
@@ -145,9 +144,9 @@ public class ForGitHub {
             System.out.println("");
         }
     }
-    
+
     private void invertedHalfPyramidRotatedBy180Deg() {
-     int n = 4;
+        int n = 4;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i; j++) {
                 System.out.print(" ");
@@ -158,4 +157,51 @@ public class ForGitHub {
             System.out.println("");
         }
     }
+
+    private void HalfPyramidWithNumbers() {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    private void InvertedHalfPyramidWithNumbers() {
+        int n = 5;
+        for (int i = n; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    private void FloydsTriangle() {
+        int n = 5;
+        int counter = 0;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                counter++;
+                System.out.print(counter + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    private void ZeroOneTriangle() {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print(1 + " ");
+                } else {
+                    System.out.print(0 + " ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+
 }
